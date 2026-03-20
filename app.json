@@ -1,5 +1,5 @@
 {
-  "name": "techword-md",
+  "name": "titanbot-core",
   "description": "techword, your friendly assistant bot with nodejs!",
   "logo": "https://files.catbox.moe/8y619f.jpg",
   "keywords": [],
@@ -13,13 +13,13 @@
   "scripts": {
     "start": "node index.js"
   },
-"env": {
-  "SESSION_ID": {
-    "description": "Must begin with 'TECHWORLD:~'.",
-    "value": "",
-    "required": true
-  }
-},  
+  "env": {
+    "SESSION_ID": {
+      "description": "Must begin with 'TECHWORLD:~'.",
+      "value": "",
+      "required": true
+    }
+  },
   "formation": {
     "worker": {
       "quantity": 1,
