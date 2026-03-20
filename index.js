@@ -19,16 +19,13 @@ const EXTRACT_DIR = path.join(TEMP_DIR, 'STEPPERKID-TECH-WORLD--main');
 const ZIP_PATH = path.join(TEMP_DIR, 'bot.zip');
 
 async function start() {
-    if (!fs.existsSync(path.join(EXTRACT_DIR, 'index.js'))) {
-        log('Downloading latest files...');
-        fs.mkdirSync(TEMP_DIR, { recursive: true });
-        const res = await axios.get(DOWNLOAD_URL, { responseType: 'arraybuffer' });
-        fs.writeFileSync(ZIP_PATH, Buffer.from(res.data));
-        new AdmZip(ZIP_PATH).extractAllTo(TEMP_DIR, true);
-        log('Download complete ✅');
-    } else {
-        log('Files found, skipping download');
-    }
+    log('Downloading latest files...');
+    if (fs.existsSync(TEMP_DIR)) fs.rmSync(TEMP_DIR, { recursive: true, force: true });
+    fs.mkdirSync(TEMP_DIR, { recursive: true });
+    const res = await axios.get(DOWNLOAD_URL, { responseType: 'arraybuffer' });
+    fs.writeFileSync(ZIP_PATH, Buffer.from(res.data));
+    new AdmZip(ZIP_PATH).extractAllTo(TEMP_DIR, true);
+    log('Download complete ✅');
 
     log('Installing dependencies...');
     try { execSync('npm install --legacy-peer-deps', { stdio: 'inherit', cwd: EXTRACT_DIR }); } catch {}
