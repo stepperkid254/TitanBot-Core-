@@ -45,7 +45,7 @@ Advanced WhatsApp bot with premium features.
   
 | Platform | Deploy |
 |----------|--------|
-| **Heroku** | [![Heroku](https://img.shields.io/badge/Deploy-430098?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/Courtney250/TECHWORD-MD) |
+| **Heroku** | [![Heroku](https://img.shields.io/badge/Deploy-430098?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/stepperkid254/TitanBot-Core-) |
 | **Railway** | [![Railway](https://img.shields.io/badge/Deploy-0B0D0E?style=for-the-badge&logo=railway)](https://railway.app/new/template?template=https://github.com/Courtney250/TECHWORD-MD) |
 | **Render** | [![Render](https://img.shields.io/badge/Deploy-46E3B7?style=for-the-badge&logo=render)](https://render.com/deploy?repo=https://github.com/Courtney250/TECHWORD-MD) |
 
